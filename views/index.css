@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Định dạng chung cho các đối tượng input và button */
+input[type="text"],
+input[type="file"],
+input[type="submit"] {
+  width: 100%; /* Độ rộng của các input và button là 100% của parent */
+  padding: 10px; /* Khoảng cách bên trong */
+  margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+  box-sizing: border-box; /* Đảm bảo kích thước tính cả border và padding */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 5px; /* Độ cong viền */
+}
+
+/* Định dạng cho input[type="file"] */
+input[type="file"] {
+  border: none; /* Loại bỏ đường viền của input[type="file"] */
+  padding: 0; /* Không có padding */
+  margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+}
+
+/* Định dạng cho table */
+table {
+  width: 100%; /* Độ rộng là 100% của parent */
+  border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+}
+
+/* Định dạng cho tr và td */
+tr,
+td {
+  padding: 10px 0; /* Khoảng cách bên trong hàng và ô */
+}
+
+/* Định dạng cho form */
+#formAdd {
+  max-width: 400px; /* Độ rộng tối đa của form */
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+  padding: 30px; /* Khoảng cách bên trong form */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 5px; /* Độ cong viền */
+}
+
+/* Định dạng cho tiêu đề */
+.titleAdd {
+  text-align: center; /* Căn giữa theo chiều ngang */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+/* Định dạng tiêu đề */
+.titleDelete {
+  text-align: center; /* Căn giữa theo chiều ngang */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+/* Định dạng cho table */
+table {
+  width: 100%; /* Chiều rộng là 100% của parent */
+  border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+/* Định dạng cho ô của table */
+td {
+  padding: 10px; /* Khoảng cách bên trong ô */
+  text-align: center; /* Căn giữa theo chiều ngang */
+}
+
+/* Định dạng cho ảnh */
+img {
+  display: block; /* Hiển thị ảnh là block để căn giữa */
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+/* Định dạng cho checkbox */
+input[type="checkbox"] {
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+/* Định dạng cho form */
+#formDelete {
+  text-align: center; /* Căn giữa theo chiều ngang */
+}
+
+/* Định dạng cho nút submit */
+input[type="submit"] {
+  display: block; /* Hiển thị nút submit là block để căn giữa */
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+  padding: 10px 20px; /* Khoảng cách bên trong nút */
+  background-color: #007bff; /* Màu nền */
+  color: #fff; /* Màu chữ */
+  border: none; /* Không có đường viền */
+  border-radius: 5px; /* Độ cong viền */
+  cursor: pointer; /* Con trỏ khi di chuột qua */
+}
+
+/* Định dạng hover cho nút submit */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Màu nền hover */
+}
+
+span{
+  color: red;
+}

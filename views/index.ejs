@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1 class="titleAdd">Form Add Students</h1>
+    <div class="contentAdd">
+        <form id="formAdd" enctype="multipart/form-data" action="save" method="post">
+            <table >
+                <tr>
+                    <td>
+                        <!-- studentId -->
+                        <input type="text" name="studentId" id="studentId" placeholder="Enter studentId"/>
+                        <span id="erStudentId"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- name -->
+                        <input type="text" name="name" id="name" placeholder="Enter name"/>
+                        <span id="erName"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- email -->
+                        <input type="text" name="email" id="email" placeholder="Enter email"/>
+                        <span id="erEmail"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- address -->
+                        <input type="text" name="address" id="address" placeholder="Enter address"/>
+                        <span id="erAddress"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- tuition -->
+                        <input type="text" name="tuition" id="tuition" placeholder="Enter tuition"/>
+                        <span id="erTuition"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- image -->
+                        <input type="file" name="image" id="image" accept="image/*"/>
+                        <span id="erImage"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Add" onclick="return checkInput()"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <h1 class="titleDelete">Table Students</h1>
+    <div class="contentDelete">
+        <form id="formDelete" enctype="multipart/form-data" action="delete" method="post">
+            <table border = "1px solid black">
+                <tr>
+                    <td>Student ID</td>
+                    <td>Student Name</td>
+                    <td>Email</td>
+                    <td>Address</td>
+                    <td>Tuition</td>
+                    <td>Image</td>
+                    <td>Delete</td>
+                    <td>Edit</td>
+                </tr>
+                <%for(let i = 0; i < data.length; i++) {%>
+                    <tr>
+                        <td><%=data[i].studentId%></td>
+                        <td><%=data[i].name%></td>
+                        <td><%=data[i].email%></td>
+                        <td><%=data[i].address%></td>
+                        <td><%=data[i].tuition%></td>
+                        <td>
+                            <img src="<%=data[i].image%>" alt="avt_<%=data[i].studentId%>" width="150" height="150">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="<%=data[i].studentId%>" id="<%=data[i].studentId%>">
+                            
+                        </td>
+                        <td>
+                            <button type="button" onclick="updateStudent('<%=data[i].studentId%>')">Edit</button>
+                        </td>
+                    </tr>
+                    <%}%>
+            </table>
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+    <script>
+        function updateStudent(studentId){
+            window.location.href="/edit?studentId=" + encodeURIComponent(studentId)
+        }
+    </script>
+</body>
+</html>

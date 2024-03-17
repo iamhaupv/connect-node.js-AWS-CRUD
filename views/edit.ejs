@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1 class="titleAdd">Form Edit Students</h1>
+    <div class="contentAdd">
+        <form id="formEdit" enctype="multipart/form-data" action="edit" method="post">
+            <table >
+                <tr>
+                    <td>
+                        <!-- studentId -->
+                        <input type="text" name="upstudentId" id="upstudentId" placeholder="Enter studentId" value="<%=data.studentId%>"/>
+                        <span id="erStudentId"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- name -->
+                        <input type="text" name="upname" id="upname" placeholder="Enter name" value="<%=data.name%>"/>
+                        <span id="erName"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- email -->
+                        <input type="text" name="upemail" id="upemail" placeholder="Enter email" value="<%=data.email%>"/>
+                        <span id="erEmail"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- address -->
+                        <input type="text" name="upaddress" id="upaddress" placeholder="Enter address" value="<%=data.address%>"/>
+                        <span id="erAddress"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- tuition -->
+                        <input type="text" name="uptuition" id="uptuition" placeholder="Enter tuition"value="<%=data.tuition%>"/>
+                        <span id="erTuition"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- image -->
+                        <img
+                            
+                            src="<%=data.image%>"
+                            alt="avt_<%=data.image%>"
+                            width="100"
+                            height="100"
+                        />
+                        <input type="file" name="oldImage" id="oldImage" accept="image/*" value="<%=data.image%>"/>
+                        <span id="erImage"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Update" onclick="return checkInput()"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
